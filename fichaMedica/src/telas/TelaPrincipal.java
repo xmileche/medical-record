@@ -26,35 +26,35 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btSair = new javax.swing.JButton();
+        btCadastrarFichaMedica = new javax.swing.JButton();
+        btProcurar = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro Geral");
         setPreferredSize(new java.awt.Dimension(600, 400));
 
-        jButton1.setText("Sair");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btSair.setText("Sair");
+        btSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btSairActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Cadastrar Ficha Médica");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        btCadastrarFichaMedica.setText("Cadastrar Ficha Médica");
+        btCadastrarFichaMedica.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                btCadastrarFichaMedicaMouseClicked(evt);
             }
         });
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btCadastrarFichaMedica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btCadastrarFichaMedicaActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Procurar");
+        btProcurar.setText("Procurar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,13 +66,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jTextField1)
-                        .addGap(68, 68, 68)
-                        .addComponent(jButton2)
-                        .addGap(79, 79, 79))
+                        .addGap(18, 18, 18)
+                        .addComponent(btProcurar)
+                        .addGap(129, 129, 129))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(btCadastrarFichaMedica)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
-                        .addComponent(jButton1)
+                        .addComponent(btSair)
                         .addGap(46, 46, 46))))
         );
         layout.setVerticalGroup(
@@ -80,35 +80,35 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
+                    .addComponent(btSair)
+                    .addComponent(btCadastrarFichaMedica))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
+                    .addComponent(btProcurar))
                 .addContainerGap(200, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSairActionPerformed
         // TODO add your handling code here:
         
         // usuario clicou no botao Sair
         System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btSairActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btCadastrarFichaMedicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarFichaMedicaActionPerformed
         // TODO add your handling code here:
                 // desabilitando tela atual para nao ser clicável
         this.setEnabled(false);
         new TelaCadastro(this).setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btCadastrarFichaMedicaActionPerformed
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void btCadastrarFichaMedicaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btCadastrarFichaMedicaMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3MouseClicked
+    }//GEN-LAST:event_btCadastrarFichaMedicaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -146,9 +146,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btCadastrarFichaMedica;
+    private javax.swing.JButton btProcurar;
+    private javax.swing.JButton btSair;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
