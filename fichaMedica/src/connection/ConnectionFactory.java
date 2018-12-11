@@ -11,7 +11,7 @@ import java.sql.SQLException;
  */
 public class ConnectionFactory {
     private static final String DRIVER = "org.postgresql.Driver";
-    private static final String URL = "jdbc:postgresql://localhost:5432/clinica";
+    private static final String URL = "jdbc:postgresql://localhost:5432/ficha_medica";
     private static final String USER = "postgres";
     private static final String PASS = "1234";
     

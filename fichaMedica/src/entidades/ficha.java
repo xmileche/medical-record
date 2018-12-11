@@ -14,12 +14,33 @@ import javafx.scene.chart.PieChart.Data;
  * @author michele
  */
 public class ficha {
+
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
     
-    private Long codigo;
-    private String nomePaciente;
+    private Integer codigo;
+
+    public Paciente getNomePaciente() {
+        return nomePaciente;
+    }
+
+    public void setNomePaciente(Paciente nomePaciente) {
+        this.nomePaciente = nomePaciente;
+    }
+    private Paciente nomePaciente;
     private String nomeCliente;
-    private Long codCarteiraVacina;
+    private Integer codCarteiraVacina;
     String Data;
+
+    public ficha() {
+        //To change body of generated methods, choose Tools | Templates.
+        
+    }
 
     public String getData() {
         return Data;
@@ -29,40 +50,37 @@ public class ficha {
         this.Data = Data;
     }
     private String funcionario;
-    private Long cpf;
+    private String cpf;
     
-    public ficha(Long codigo, 
-            String nomeP, 
-            String nomeC, 
-            Long cpf, 
-            Long codCarteiraVacina, 
-            String Data, 
-            String funcionario) {
+    public ficha(Integer codigo, 
+            Paciente nomeP,  
+            String cpf) {
         this.codigo = codigo;
         this.nomePaciente = nomeP;
-        this.nomeCliente = nomeC;
-        this.codCarteiraVacina = codCarteiraVacina;
+        this.cpf = cpf;
+    }
+    public ficha(Integer codigo, 
+            Paciente nomeP,  
+            String cpf,  
+            String Data) {
+        this.codigo = codigo;
+        this.nomePaciente = nomeP;
         this.Data = Data;
-        this.funcionario = funcionario;
         this.cpf = cpf;
     }
     
-       
-    public Long getCodigo() {
-        return codigo;
+    public ficha(Long codigo, String cpf){
+        this.cpf = cpf;
     }
 
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
+    public String getCpf() {
+        return cpf;
     }
 
-    public String getNomePaciente() {
-        return nomePaciente;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
-
-    public void setNomePaciente(String nomePaciente) {
-        this.nomePaciente = nomePaciente;
-    }
+   
 
     public String getNomeCliente() {
         return nomeCliente;
@@ -72,30 +90,20 @@ public class ficha {
         this.nomeCliente = nomeCliente;
     }
 
-    public Long getCodCarteiraVacina() {
+    public Integer getCodCarteiraVacina() {
         return codCarteiraVacina;
     }
 
-    public void setCodCarteiraVacina(Long codCarteiraVacina) {
+    public void setCodCarteiraVacina(Integer codCarteiraVacina) {
         this.codCarteiraVacina = codCarteiraVacina;
     }
 
-
-    public String getFuncionario() {
-        return funcionario;
+    @Override
+    public String toString() {
+        return "ficha{" + "codigo=" + codigo + ", nomePaciente=" + nomePaciente + ", nomeCliente=" + nomeCliente + ", codCarteiraVacina=" + codCarteiraVacina + ", Data=" + Data + ", funcionario=" + funcionario + ", cpf=" + cpf + '}';
     }
 
-    public void setFuncionario(String funcionario) {
-        this.funcionario = funcionario;
-    }
 
-    public Long getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(Long cpf) {
-        this.cpf = cpf;
-    }
-
+    
     
 }

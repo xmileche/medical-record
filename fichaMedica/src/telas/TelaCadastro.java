@@ -6,6 +6,7 @@
 package telas;
 
 import controles.FichaController;
+import entidades.Paciente;
 import entidades.ficha;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -43,26 +44,13 @@ public class TelaCadastro extends javax.swing.JFrame {
         btSalvar = new javax.swing.JButton();
         btCancelar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         tfNomePaciente = new javax.swing.JTextField();
-        tfCarteiradeVacina = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        listMedicamentos = new javax.swing.JList<>();
-        btVisualizar = new javax.swing.JButton();
-        ftfData = new javax.swing.JFormattedTextField();
-        tfFuncionario = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        tfNomeCliente = new javax.swing.JTextField();
         ftfCPF = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Ficha Médica");
-        setPreferredSize(new java.awt.Dimension(600, 600));
+        setPreferredSize(new java.awt.Dimension(600, 200));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
@@ -86,18 +74,6 @@ public class TelaCadastro extends javax.swing.JFrame {
 
         jLabel1.setText("Nome do Paciente");
 
-        jLabel2.setText("Histórico de medicamentos");
-
-        jLabel3.setText("Histórico de consultas");
-
-        jLabel4.setText("Código Carteira de Vacinação");
-
-        jLabel5.setText("Data");
-
-        jLabel6.setText("Nome do funcionário");
-
-        jLabel7.setText("Nome do Cliente");
-
         tfNomePaciente.setToolTipText("Informe o nome do paciente");
         tfNomePaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,34 +81,7 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        tfCarteiradeVacina.setToolTipText("Informe o código da carteira de vacinação");
-        tfCarteiradeVacina.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfCarteiradeVacinaActionPerformed(evt);
-            }
-        });
-
-        listMedicamentos.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(listMedicamentos);
-
-        btVisualizar.setText("Visualizar");
-        btVisualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btVisualizarActionPerformed(evt);
-            }
-        });
-
-        ftfData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
-
-        tfFuncionario.setToolTipText("Nome do funcionário");
-
         jLabel8.setText("CPF do Cliente");
-
-        tfNomeCliente.setToolTipText("Informe o nome do cliente");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -143,27 +92,15 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(tfNomeCliente, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tfNomePaciente, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tfFuncionario, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(btSalvar)
-                                        .addGap(52, 52, 52)
+                                        .addGap(53, 53, 53)
                                         .addComponent(btCancelar))
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel4)
-                                    .addComponent(tfCarteiradeVacina, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ftfData, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3)
-                                    .addComponent(btVisualizar))
-                                .addGap(0, 1093, Short.MAX_VALUE)))
+                                    .addComponent(jLabel1))
+                                .addGap(0, 1178, Short.MAX_VALUE)))
                         .addGap(28, 28, 28))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,39 +115,15 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tfNomePaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ftfCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btVisualizar)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tfCarteiradeVacina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
-                .addGap(12, 12, 12)
-                .addComponent(ftfData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(jLabel6)
-                .addGap(12, 12, 12)
-                .addComponent(tfFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btSalvar)
                     .addComponent(btCancelar))
-                .addContainerGap())
+                .addGap(37, 37, 37))
         );
 
         pack();
@@ -224,18 +137,6 @@ public class TelaCadastro extends javax.swing.JFrame {
         telaAnterior.setEnabled(true);
     }//GEN-LAST:event_formWindowClosed
 
-    private void tfCarteiradeVacinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCarteiradeVacinaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfCarteiradeVacinaActionPerformed
-
-    private void btVisualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVisualizarActionPerformed
-        // TODO add your handling code here:
-        // Visualizar consultas
-        this.setEnabled(false);
-        new Consulta(this).setVisible(true);
-      
-    }//GEN-LAST:event_btVisualizarActionPerformed
-
     private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed
         // TODO add your handling code here:
         // Botao cancelar ficha medica
@@ -246,41 +147,18 @@ public class TelaCadastro extends javax.swing.JFrame {
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
         // TODO add your handling code here:
         String nomePaciente = tfNomePaciente.getText();
-        String nomeCliente = tfNomeCliente.getText();
+        Paciente p = new Paciente();
+        p.setNomePaciente(nomePaciente);
         String cpf = ftfCPF.getText();
-        String carteira = tfCarteiradeVacina.getText();
         Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd.hhmmss");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String d = sdf.format(date);
-        String funcionario = tfFuncionario.getText();
-        
-        Long cpfCliente = 0l;
-        Long carteira_v = 0l;
-        
-        
-        try{
-            cpfCliente = Long.parseLong(cpf);
-            System.out.println("a="+cpfCliente);
-        } catch (Exception e){
-            JOptionPane.showMessageDialog(this, "CPF inválido");
-            return;
-        }
-        
-        try{
-            carteira_v = Long.parseLong(carteira);
-        } catch (Exception e){
-            JOptionPane.showMessageDialog(this, "Carteira de Vacina inválida");
-            return;
-        }
                 
         ficha f;
         f = new ficha(null, 
-                nomePaciente, 
-                nomeCliente, 
-                cpfCliente, 
-                carteira_v, 
-                d, 
-                funcionario);
+                p,  
+                cpf,  
+                d);
         FichaController controlador = new FichaController();
         if(controlador.cadastrarFicha(f)){
             JOptionPane.showMessageDialog(this, "Cadastrado com sucesso");
@@ -330,22 +208,9 @@ public class TelaCadastro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCancelar;
     private javax.swing.JButton btSalvar;
-    private javax.swing.JButton btVisualizar;
     private javax.swing.JTextField ftfCPF;
-    private javax.swing.JFormattedTextField ftfData;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList<String> listMedicamentos;
-    private javax.swing.JTextField tfCarteiradeVacina;
-    private javax.swing.JTextField tfFuncionario;
-    private javax.swing.JTextField tfNomeCliente;
     private javax.swing.JTextField tfNomePaciente;
     // End of variables declaration//GEN-END:variables
 
